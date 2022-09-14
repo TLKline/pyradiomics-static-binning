@@ -1,5 +1,5 @@
 # Introduction
-PyRadiomics appeared to always be setting the binning based on the minimum and maximum values of the pixel/voxel intensities of the mask rather than the whole image. This created an issue because the first bins did not always correspond to the same pixel/voxel intensities. When masks were eroded or dilated, the minimum pixel value would sometimes change which lead to differences in what the bin corresponding to a given frequency range would be coded as. Note that the version of PyRadiomics in the staticBinning branch should be the same as the version of PyRadiomics acquired from https://github.com/AIM-Harvard/pyradiomics  on March 28th, 2022.
+PyRadiomics by default performs dynamic histogram binning. Thus, binning is based on the minimum and maximum values of the pixel/voxel intensities of the mask rather than the whole image. This can create a number of issues. For one, the first bin will not always correspond to the same pixel/voxel intensities. When masks were eroded or dilated, the minimum pixel value will change which leads to differences in what the bin corresponding to a given frequency range would be coded as. Note that the version of PyRadiomics in the staticBinning branch should be the same as the version of PyRadiomics acquired from https://github.com/AIM-Harvard/pyradiomics on March 28th, 2022.
 
 Getting Started
 
